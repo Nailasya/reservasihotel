@@ -13,23 +13,23 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('customers', function (Blueprint $table) {
+        Schema::create('kamar', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_customer');
-            $table->string('username');
-            $table->string('no_tlp');
-            $table->string('password');
+            $table->string('nama_kamar');
+            $table->string('fasilitas_kamar');
+            $table->string('harga_kamar');
+            $table->float('kuantitas_kamar');
             $table->timestamps();
         });
     }
 
-    /**
+    /*
      * Reverse the migrations.
      *
      * @return void
      */
     public function down()
     {
-        Schema::dropIfExists('customers');
+        Schema::dropIfExists('kamar');
     }
 };

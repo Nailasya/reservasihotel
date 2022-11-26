@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Admin extends Model
+class Kamar extends Model
 {
     protected $fillable =[
-        'id','username','password'
+        'nama_kamar','fasilitas_kamar','harga_kamar','kuantitas_kamar'
     ];
 }
