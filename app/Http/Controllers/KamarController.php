@@ -21,8 +21,8 @@ class KamarController extends Controller
         $table = Kamar::create([
             "nama_kamar" => $request->nama_kamar,
             "fasilitas_kamar" => $request->fasilitas_kamar,
-            "harga_kamar" => $request->kuantitas_kamar,
-            "kuantitas_kamar" => $request->harga_kamar
+            "kuantitas_kamar" => $request->harga_kamar,
+            "harga_kamar" => $request->kuantitas_kamar
         ]);
 
         return response()->json([
@@ -56,8 +56,8 @@ class KamarController extends Controller
          if($kamar){
              $kamar->nama_kamar = $request->nama_kamar ? $request->nama_kamar : $kamar->nama_kamar;
              $kamar->fasilitas_kamar = $request->fasilitas_kamar ? $request->fasilitas_kamar : $kamar->fasilitas_kamar;
-             $kamar->harga_kamar = $request->kuantitas_kamar ? $request->kuantitas_kamar : $kamar->kuantitas_kamar;
-             $kamar->kuantitas_kamar = $request->harga_kamar ? $request->harga_kamar : $kamar->harga_kamar;
+             $kamar->kuantitas_kamar = $request->kuantitas_kamar ? $request->kuantitas_kamar : $kamar->kuantitas_kamar;
+             $kamar->harga_kamar = $request->harga_kamar ? $request->harga_kamar : $kamar->harga_kamar;
              $kamar->save();
              return response()->json([
  

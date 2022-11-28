@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('nama_kamar');
             $table->string('fasilitas_kamar');
-            $table->string('harga_kamar');
-            $table->float('kuantitas_kamar');
+            $table->string('kuantitas_kamar');
+            $table->float('harga_kamar');
             $table->timestamps();
         });
     }
